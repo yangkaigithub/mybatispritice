@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="YkMybatisPritice:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="tan.maven.springmvc-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="YkMybatisPritice:war exploded" />
+    </root>
+  </artifact>
+</component>
