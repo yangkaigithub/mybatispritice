@@ -11,5 +11,13 @@
     <select id="finduserbyusername" parameterType="String" resultType="User">
         SELECT * FROM mybatis.user WHERE username LIKE '%${value}%'
     </select>
+    <insert id="insertuser" parameterType="User">
+        INSERT INTO mybatis.user(id,username,sex,birthday,address) VALUE (#{id},#{username},#{sex},#{birthday},#{address})
+    </insert>
+
+    <update id="updateuserbyid" parameterType="User">
+        UPDATE user SET username=#{username},birthday=#{birthday},sex=#{sex},address=#{address}
+        WHERE id = #{id}
+    </update>
 
 </mapper>

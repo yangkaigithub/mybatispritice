@@ -54,6 +54,14 @@ public class User {
 
     private String address;
 
+    public User(String id, String username, String sex, Date birthday, String address) {
+        this.id = id;
+        this.username = username;
+        this.sex = sex;
+        this.birthday = birthday;
+        this.address = address;
+    }
+
     @Override
     public String toString() {
         return  "id = " + id + "\n"
@@ -62,4 +70,5 @@ public class User {
                 + "birthday = " + birthday + "\n"
                 + "address = " + address + "\n";
     }
+
 }

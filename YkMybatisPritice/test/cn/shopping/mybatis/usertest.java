@@ -12,6 +12,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.io.InputStream;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -44,5 +45,25 @@ public class usertest {
         System.out.println(userlist);
 
     }
+    //用户信息的综合 插入
+    @Test
+    public void testinsertuser() throws Exception {
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        Usermapper usermapper = sqlSession.getMapper(Usermapper.class);
+        Date date = new Date(1994-01-29);
+        User user = new User("648049530","yk","m",date,"zju");
+        usermapper.insertuser(user);
+        sqlSession.commit();
+    }
 
+    //用户信息的综合 更新
+    @Test
+    public void testupdateuser() throws Exception {
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        Usermapper usermapper = sqlSession.getMapper(Usermapper.class);
+        Date date = new Date(1994-01-29);
+        User user = new User("648049530","yk","m",date,"zju");
+        usermapper.updateuserbyid(user);
+        sqlSession.commit();
+    }
 }

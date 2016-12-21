@@ -9,4 +9,6 @@ import java.util.List;
  */
 public interface Usermapper {
     public List<User> finduserbyusername(String username) throws Exception;
+    public void insertuser(User user)throws Exception;
+    public void updateuserbyid(User user)throws  Exception;
 }
