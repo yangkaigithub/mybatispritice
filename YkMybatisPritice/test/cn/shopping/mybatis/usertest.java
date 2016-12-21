@@ -36,7 +36,7 @@ public class usertest {
     @Test
     public void testFindUserByUsername() throws Exception {
         SqlSession sqlSession = sqlSessionFactory.openSession();
-        UserMapper
+
 
 
     }
