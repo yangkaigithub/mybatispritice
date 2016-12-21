@@ -54,5 +54,12 @@ public class User {
 
     private String address;
 
-
+    @Override
+    public String toString() {
+        return  "id = " + id + "\n"
+                + "username = " + username + "\n"
+                + "sex = " + sex + "\n"
+                + "birthday = " + birthday + "\n"
+                + "address = " + address + "\n";
+    }
 }

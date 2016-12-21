@@ -2,6 +2,8 @@ package cn.shopping.mybatis;
 
 
 
+import cn.shopping.mybatis.mapper.Usermapper;
+import cn.shopping.mybatis.po.User;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -10,6 +12,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.io.InputStream;
+import java.util.List;
 
 /**
  * Created by tpusers on 2016/12/20.
@@ -36,8 +39,9 @@ public class usertest {
     @Test
     public void testFindUserByUsername() throws Exception {
         SqlSession sqlSession = sqlSessionFactory.openSession();
-
-
+        Usermapper usermapper = sqlSession.getMapper(Usermapper.class);
+        List<User> userlist = usermapper.finduserbyusername("y");
+        System.out.println(userlist);
 
     }
 
